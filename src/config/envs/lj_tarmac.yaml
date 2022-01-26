@@ -1,0 +1,41 @@
+env: lj
+
+env_args:
+  size: 10
+  vision: 0
+  nagents: 5
+  ntree: 2
+  symmetric_agents: True
+  explicit_cut_tree_action: False # True
+  no_stay: False
+  limit: 40    
+  serial_exec: True
+  obstacles:
+      random: adjacent  
+      num: 1          
+      location: none  
+      horizontal: none 
+      size: 9 
+      attn:
+        - 4.5          
+      attn_tree: 4.5
+wifi_args:
+  name: wifi
+  constant_file: constants_0616 
+  comm_type: always 
+  msg_type: 
+    - hid
+    - rss
+  embedder_type:
+    hid: sage 
+    rss: sage 
+  msg_replay: generated 
+  msg_gradient: attach 
+
+test_greedy: True
+test_nepisode: 128
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 4050000

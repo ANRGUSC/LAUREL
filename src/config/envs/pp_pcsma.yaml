@@ -1,0 +1,31 @@
+env: pp
+
+env_args:
+  size: 5
+  vision: 0
+  nagents: 3
+  moving_prey: False
+  nenemies: 1
+  no_stay: False
+  limit: 20     
+  serial_exec: True
+  obstacles:  #{}
+      random: random  
+      num: 1          
+      location: none  
+      horizontal: none 
+      size: 2 
+      attn:
+        - 4.5 
+wifi_args:
+  name: pCSMA
+  type: original
+  constant_file: constants_0220
+  
+test_greedy: True
+test_nepisode: 32
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 2050000
