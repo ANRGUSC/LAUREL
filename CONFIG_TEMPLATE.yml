@@ -8,8 +8,11 @@ device:
   software:
     os: linux       # windows / linux
 logging:
-  logger: utils.logging_wandb.LoggerWandB
+  logger: utils.logging_base.LoggerBase
   dir: 
-    local: ../pymarl_zz/logs
+    local: ./logs
   ignore_config_name: 
     - toy.yml
+  logger_configs:
+    api_key: -1
+

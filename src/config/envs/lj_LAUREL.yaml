@@ -5,32 +5,32 @@ env_args:
   vision: 0
   nagents: 5
   ntree: 3
-  symmetric_agents: False   
+  symmetric_agents: True
   explicit_cut_tree_action: False 
   no_stay: False
-  limit: 40     
+  limit: 40    
   serial_exec: True
   obstacles:
-      random: adjacent  
+      random: adjacent 
       num: 1         
       location: none  
       horizontal: none 
       size: 9 
       attn:
-        - 4.5 
+        - 4.5         
       attn_tree: 4.5
 wifi_args:
   name: wifi
   constant_file: constants_0616 
-  comm_type: never 
+  comm_type: policy
   msg_type: 
     - hid
     - rss
   embedder_type:
     hid: gin 
     rss: gin 
-  msg_replay: generated
-  msg_gradient: attach 
+  msg_replay: generated 
+  msg_gradient: attach    
 
 test_greedy: True
 test_nepisode: 128

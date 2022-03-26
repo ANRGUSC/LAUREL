@@ -40,7 +40,6 @@ def run(_run, _config, _log):
                   'wifi': {'name': 'none'} if not hasattr(args, 'wifi_args') else args.wifi_args}
     if 'name' not in config_env['game']:
         config_env['game']['name'] = args.env
-    
     logger_customize = LoggerCuz(
         {'logger_key'   : '',
          'args'         : args,
@@ -52,7 +51,8 @@ def run(_run, _config, _log):
     )
     logger_customize.cpy_cfg_yml(_config['file_alg_config'])
     logger_customize.cpy_cfg_yml(_config['file_env_config'])
-    logger_customize.cpy_cfg_yml(f'./src/config/default.yaml')
+    logger_customize.cpy_cfg_yml(_config['file_rl_config'])
+    # logger_customize.cpy_cfg_yml(f'./src/config/default.yaml')
     logger = Logger(_log, logger_customize=logger_customize)
 
     _log.info("Experiment Parameters:")

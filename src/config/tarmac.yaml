@@ -3,7 +3,7 @@
 # --- LAUREL options ---
 runner: "episode" # Runs 1 env for an episode
 mac: "basic_mac" # Basic controller
-env: "pp" # Environment name    # sc2
+env: "pp" # Environment name  
 env_args: {} # Arguments for the environment
 batch_size_run: 1 # Number of environments to run in parallel
 test_nepisode: 20 # Number of episodes to test for
@@ -37,7 +37,7 @@ optim_eps: 0.00001 # RMSProp epsilon
 grad_norm_clip: 1 # Reduce magnitude of gradients above this L2 norm
 
 # --- Agent parameters ---
-agent: "tar-rnn" # Default rnn agent
+agent: "tar-rnn" # TarMAC rnn agent
 rnn_hidden_dim: 64 # Size of hidden state for default rnn agent
 obs_agent_id: True # Include the agent's one_hot id in the observation
 obs_last_action: True # Include the agent's last action (one_hot) in the observation

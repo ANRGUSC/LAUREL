@@ -45,7 +45,7 @@ def _get_config(params, arg_name, subfolder):
         filename = os.path.join(os.path.dirname(__file__), 'config', subfolder, f'{config_name}.yaml')
         with open(os.path.join(os.path.dirname(__file__), "config", subfolder, "{}.yaml".format(config_name)), "r") as f:
             try:
-                config_dict = yaml.load(f)
+                config_dict = yaml.load(f, Loader=yaml.FullLoader)
             except yaml.YAMLError as exc:
                 assert False, "{}.yaml error: {}".format(config_name, exc)
         return config_dict, filename
@@ -82,6 +82,7 @@ if __name__ == '__main__':
     logger_repetition_key = _get_config(params, "--repetition_key", None)
     config_dict = recursive_dict_update(config_dict, env_config)
     config_dict = recursive_dict_update(config_dict, alg_config)
+    config_dict['file_rl_config'] = file_rl_config
     config_dict['file_env_config'] = file_env_config
     config_dict['file_alg_config'] = file_alg_config
     config_dict['cuda'] = gpu_number

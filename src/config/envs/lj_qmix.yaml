@@ -8,10 +8,10 @@ env_args:
   symmetric_agents: False 
   explicit_cut_tree_action: False 
   no_stay: False
-  limit: 40    
+  limit: 40     # equivalent to max_steps
   serial_exec: True
   obstacles:
-      random: adjacent 
+      random: adjacent  
       num: 1          
       location: none  
       horizontal: none 
@@ -22,13 +22,13 @@ env_args:
 wifi_args:
   name: wifi
   constant_file: constants_0616 
-  comm_type: always 
+  comm_type: never 
   msg_type: 
     - hid
-    # - rss
+    #- rss
   embedder_type:
     hid: sage 
-    # rss: sage
+    # rss: sage 
   msg_replay: generated 
   msg_gradient: attach    
 
