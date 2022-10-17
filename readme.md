@@ -1,3 +1,6 @@
+# LAUREL: Learn prActical commUnication strategies in cooperative Multi-Agent REinforcement Learning
+This repository is the official implementaton of [Learning Practical Communication Strategies in Cooperative Multi-Agent Reinforcement Learning](https://anrg.usc.edu/www/papers/hu22.pdf).
+
 ## Dependencies
 
 * python==3.10.4
@@ -106,3 +109,19 @@ We refered to pymarl implementation of QMIX algorithm (no wireless environment a
 
 ## License
 Code licensed under the MIT License
+
+## Citation
+
+If you found the implementation or paper helpful, you are encouraged to cite our paper
+
+```
+@inproceedings{h22,
+  title={Learning Practical Communication Strategies in Cooperative Multi-Agent Reinforcement Learning},
+  author={Hu, Diyi and Zhang, Chi and Prasanna, Viktor and Krishnamachari, Bhaskar},
+  booktitle={Asian Conference on Machine Learning},
+  pages={},
+  year={2022},
+  organization={PMLR}
+}
+
+```
