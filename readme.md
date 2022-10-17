@@ -1,4 +1,4 @@
-# LAUREL: Learn prActical commUnication strategies in cooperative Multi-Agent REinforcement Learning
+# LAUREL: Learning prActical commUnication strategies in cooperative Multi-Agent REinforcement Learning
 This repository is the official implementaton of [Learning Practical Communication Strategies in Cooperative Multi-Agent Reinforcement Learning](https://anrg.usc.edu/www/papers/hu22.pdf).
 
 ## Dependencies
